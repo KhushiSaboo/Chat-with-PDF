@@ -1,12 +1,53 @@
-# 📄 Chat with PDF
+# 📄 Chat With PDF
 
-An AI-powered chatbot that lets you upload a PDF and ask questions about it using Retrieval-Augmented Generation (RAG).
+An AI-powered PDF question-answering chatbot built using **Retrieval-Augmented Generation (RAG)**.
 
-## 🛠️ Built With
-- **Streamlit** — web interface
-- **LangChain** — RAG pipeline
-- **OpenAI** — language model
-- **ChromaDB** — vector store
+The application allows users to upload a PDF and ask natural-language questions about its content. Instead of sending the entire document to the language model, the application retrieves the most relevant sections of the PDF and uses them as context to generate accurate, context-aware responses.
+
+## 🚀 Features
+
+- 📄 Upload PDF documents
+- 🔍 Extract and split PDF content into chunks
+- 🧠 Generate embeddings for document chunks
+- 🗃️ Store and search document embeddings using ChromaDB
+- 🔎 Retrieve relevant information using semantic similarity search
+- 🤖 Generate answers using Google's Gemini API
+- 💬 Ask multiple questions about the uploaded document
+- 🌐 Simple and interactive Streamlit interface
+
+## 🛠️ Tech Stack
+
+- **Python**
+- **Streamlit** – Web interface
+- **LangChain** – RAG pipeline and document processing
+- **Google Gemini** – Large Language Model
+- **ChromaDB** – Vector database
+- **PyPDF** – PDF text extraction
+
+## 🧠 How It Works
+
+The application follows a Retrieval-Augmented Generation (RAG) pipeline:
+
+```text
+             PDF Upload
+                  ↓
+          Extract PDF Text
+                  ↓
+          Split into Chunks
+                  ↓
+        Generate Embeddings
+                  ↓
+       Store in ChromaDB
+                  ↓
+          User asks a question
+                  ↓
+       Semantic Similarity Search
+                  ↓
+       Retrieve relevant chunks
+                  ↓
+       Send context to Gemini
+                  ↓
+          Generate Answer
 
 ## 🚀 How to Run Locally
 ```bash
